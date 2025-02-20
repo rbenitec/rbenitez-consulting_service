@@ -2,6 +2,10 @@ spring:
   application:
     name: rbenitez-consulting-service
     version: 1.0.0
+  cloud:
+    config:
+      enable: true
+      uri: http://localhost:8090
   data:
     mongodb:
       uri: "mongodb+srv://m001-estudiante:rjbc2095@sandbox.ymd2iym.mongodb.net/rbenitez_banking?retryWrites=true&w=majority&appName=Sandbox"
@@ -13,8 +17,8 @@ spring:
         url: "http://localhost:9090"
       transaction:
         url: "http://localhost:9089"
-server:
-  port: 8081
+#server:
+#  port: 8081
 logging:
   file:
     name: /home/usrfc/mth-applications-dev/biller/log/consultingservice.log
